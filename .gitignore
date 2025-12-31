@@ -8,7 +8,6 @@ __pycache__/
 
 # Data (Excluded from GitHub)
 data/
-results/
 _OLD_FILES/
 Presentation_Overleaf.zip
 *.zip
