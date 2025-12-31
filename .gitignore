@@ -8,9 +8,7 @@ __pycache__/
 
 # Data (Excluded from GitHub)
 data/
-_OLD_FILES/
-Presentation_Overleaf.zip
-*.zip
+
 
 # Environment
 .env
