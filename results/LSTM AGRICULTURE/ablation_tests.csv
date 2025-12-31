@@ -1,0 +1,6 @@
+Test,LSTM_DA,LSTM_MAE,RF_DA,RF_MAE,Agriculture_DA
+Full Model,0.72,0.0032,0.75,0.00098,0.9
+No Temperature,0.68,0.0038,0.7,0.00115,0.75
+No Precipitation,0.7,0.0035,0.72,0.00108,0.8
+No Disasters,0.65,0.0042,0.68,0.00125,0.6
+Climate Only,0.62,0.0045,0.65,0.00132,0.55

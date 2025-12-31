@@ -1,0 +1,12 @@
+Snapshot: 20251205_1532
+Generated: 2025-12-05 15:32
+
+Signals Summary:
+Secteur,Ticker,Modèle,RV_Prédite,Signal,Confiance,DA,Rationale
+Financials,XLF,LSTM,0.02227752045738338,NEUTRAL,MEDIUM,0.72,Volatilité modérée (0.0223) → Maintenir position actuelle
+Consumer_Staples,XLP,LSTM,0.02376675818727036,SHORT/HEDGE,HIGH,0.72,"Haute volatilité (0.0238) → Alerte risque, protection recommandée"
+SP500,SPY,LSTM,0.0399502061941148,SHORT/HEDGE,HIGH,0.71,"Haute volatilité (0.0400) → Alerte risque, protection recommandée"
+Utilities,XLU,RF,0.017421567478221177,NEUTRAL,MEDIUM,0.75,Volatilité modérée (0.0174) → Maintenir position actuelle
+Materials,XLB,RF,0.015099687614767883,NEUTRAL,MEDIUM,0.68,Volatilité modérée (0.0151) → Maintenir position actuelle
+Technology,XLK,RF,0.0247879665245812,NEUTRAL,MEDIUM,0.7,Volatilité modérée (0.0248) → Maintenir position actuelle
+Agriculture,DBA,LSTM_GLOBAL,0.009742171931512918,LONG,HIGH,0.9,Faible volatilité (0.0097) → Environnement stable favorable
