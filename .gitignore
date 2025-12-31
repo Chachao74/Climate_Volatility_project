@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Mac
+.DS_Store
+
+# Data (Excluded from GitHub)
+data/
+results/
+_OLD_FILES/
+Presentation_Overleaf.zip
+*.zip
+
+# Environment
+.env
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Models (Optional: remove if you want to version models)
+*.h5
+*.pkl
