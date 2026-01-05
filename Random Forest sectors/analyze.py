@@ -6,8 +6,9 @@ import matplotlib.pyplot as plt
 import os
 
 # Define paths
-DATA_PATH = '/Users/charlieormond/Desktop/charlie_projet/data/process/panel_monthly.csv'
-RESULTS_DIR = '/Users/charlieormond/Desktop/charlie_projet/results/final_analysis_enhanced'
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(PROJECT_ROOT, 'data', 'process', 'panel_monthly.csv')
+RESULTS_DIR = os.path.join(PROJECT_ROOT, 'results', 'final_analysis_enhanced')
 
 # Top 3 Sectors for detailed plotting
 TOP_SECTORS = ['RV_Utilities', 'RV_Technology', 'RV_Materials']

@@ -27,10 +27,11 @@ from tensorflow.keras.callbacks import EarlyStopping
 # ======================================================
 # CONFIGURATION
 # ======================================================
-DATA_PATH = '/Users/charlieormond/Desktop/charlie_projet/data/process/panel_full_pca.csv'
-PCA_MODEL_PATH = '/Users/charlieormond/Desktop/charlie_projet/data/process/pca_full_model.pkl'
-PCA_FEATURES_PATH = '/Users/charlieormond/Desktop/charlie_projet/data/process/pca_full_features.pkl'
-RESULTS_DIR = '/Users/charlieormond/Desktop/charlie_projet/results/LSTM_Final_Complete'
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(PROJECT_ROOT, 'data', 'process', 'panel_full_pca.csv')
+PCA_MODEL_PATH = os.path.join(PROJECT_ROOT, 'data', 'process', 'pca_full_model.pkl')
+PCA_FEATURES_PATH = os.path.join(PROJECT_ROOT, 'data', 'process', 'pca_full_features.pkl')
+RESULTS_DIR = os.path.join(PROJECT_ROOT, 'results', 'LSTM_Final_Complete')
 
 SEQUENCE_LENGTH = 52 # Weeks
 FORECAST_HORIZON = 4 # Weeks

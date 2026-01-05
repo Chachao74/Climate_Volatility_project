@@ -18,7 +18,7 @@ The dataset used for this analysis (ERA5 climate data + EM-DAT disaster records)
 **It has been provided separately via email/ swiss transfert link**
 Please place the `data/` folder at the root of this repository to run the scripts.
 
-##  Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.8+

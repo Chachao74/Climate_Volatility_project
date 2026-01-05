@@ -13,8 +13,9 @@ import os
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
-DATA_PATH = '/Users/charlieormond/Desktop/charlie_projet/data/process/panel_monthly.csv'
-RESULTS_DIR = '/Users/charlieormond/Desktop/charlie_projet/results/tech_analysis'
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(PROJECT_ROOT, 'data', 'process', 'panel_monthly.csv')
+RESULTS_DIR = os.path.join(PROJECT_ROOT, 'results', 'tech_analysis')
 
 # Pays pertinents pour Technology
 # Regroupés par catégorie pour analyse
