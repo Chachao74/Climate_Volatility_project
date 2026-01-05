@@ -23,9 +23,10 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, LSTM, Dense, Dropout, Flatten, Multiply, Reshape
 
 # CONFIG
-RF_DATA_PATH = 'data/process/panel_monthly.csv'
-LSTM_DATA_PATH = 'data/process/panel_full_pca.csv'
-MODELS_DIR = 'bot/models'
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RF_DATA_PATH = os.path.join(PROJECT_ROOT, 'data', 'process', 'panel_monthly.csv')
+LSTM_DATA_PATH = os.path.join(PROJECT_ROOT, 'data', 'process', 'panel_full_pca.csv')
+MODELS_DIR = os.path.join(PROJECT_ROOT, 'bot', 'models')
 TICKER = 'DBA'
 
 if not os.path.exists(MODELS_DIR):
@@ -154,7 +155,8 @@ def train_lstm_agriculture(df_agri_clean):
     rv_weekly.name = 'RV_Agriculture'
     
     # 2. Load Daily Panel (Lightweight Features)
-    DAILY_DATA_PATH = 'data/process/panel_daily.csv'
+    # 2. Load Daily Panel (Lightweight Features)
+    DAILY_DATA_PATH = os.path.join(PROJECT_ROOT, 'data', 'process', 'panel_daily.csv')
     df_daily = pd.read_csv(DAILY_DATA_PATH)
     df_daily['Date'] = pd.to_datetime(df_daily['Date'])
     

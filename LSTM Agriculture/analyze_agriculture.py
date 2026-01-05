@@ -14,8 +14,10 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 from sklearn.preprocessing import MinMaxScaler
 import warnings
 warnings.filterwarnings('ignore')
+import os
 
-OUTPUT_DIR = 'results/Agriculture'
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'results', 'Agriculture')
 
 def calculate_rv(series):
     return np.sqrt(np.sum(series**2))
@@ -44,15 +46,20 @@ print("🌾 AGRICULTURE LSTM - EXACT FORMAT")
 print("="*80)
 
 # Load model
-model = load_model('bot/models/lstm_agriculture.h5', custom_objects={"attention_block": None}, compile=False)
-scaler = joblib.load('bot/models/scaler_agriculture.pkl')
+# Load model
+model_path = os.path.join(PROJECT_ROOT, 'bot', 'models', 'lstm_agriculture.h5')
+scaler_path = os.path.join(PROJECT_ROOT, 'bot', 'models', 'scaler_agriculture.pkl')
+model = load_model(model_path, custom_objects={"attention_block": None}, compile=False)
+scaler = joblib.load(scaler_path)
 
 df_agri = get_agri_data()
 rv_weekly = df_agri['Log_Ret'].resample('W-FRI').apply(calculate_rv)
 rv_weekly.name = 'RV_Agriculture'
 
 # Load disaster-specific panel
-df_daily = pd.read_csv('data/process/panel_daily_disaster_specific.csv')
+# Load disaster-specific panel
+data_path = os.path.join(PROJECT_ROOT, 'data', 'process', 'panel_daily_disaster_specific.csv')
+df_daily = pd.read_csv(data_path)
 df_daily['Date'] = pd.to_datetime(df_daily['Date'])
 
 disaster_cols = [c for c in df_daily.columns if any(x in c for x in ['count_', 'deaths_', 'affected_', 'damage_', 'disaster_count'])]
