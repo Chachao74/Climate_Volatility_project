@@ -12,11 +12,10 @@ It implements a machine learning pipeline that uses granular climate data (ERA5)
 - **`Random Forest/`**: Monthly benchmark models using Random Forests.
 - **`Strategy/`**: Investment strategy backtesting (Volatility Breakout) and live trading logic.
 - **`robustness/`**: Scripts for ablation studies and stability checks.
-- **`Presentation/`**: Slides and script for the project presentation.
 
 ## Dataset
 The dataset used for this analysis (ERA5 climate data + EM-DAT disaster records) is too large to be hosted on GitHub.
-**It has been provided separately via email/zip archive.**
+**It has been provided separately via email/ swiss transfert link**
 Please place the `data/` folder at the root of this repository to run the scripts.
 
 ##  Getting Started
