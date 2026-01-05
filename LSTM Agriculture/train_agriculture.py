@@ -26,7 +26,7 @@ from tensorflow.keras.layers import Input, LSTM, Dense, Dropout, Flatten, Multip
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RF_DATA_PATH = os.path.join(PROJECT_ROOT, 'data', 'process', 'panel_monthly.csv')
 LSTM_DATA_PATH = os.path.join(PROJECT_ROOT, 'data', 'process', 'panel_full_pca.csv')
-MODELS_DIR = os.path.join(PROJECT_ROOT, 'bot', 'models')
+MODELS_DIR = os.path.join(PROJECT_ROOT, 'Strategy', 'models')
 TICKER = 'DBA'
 
 if not os.path.exists(MODELS_DIR):

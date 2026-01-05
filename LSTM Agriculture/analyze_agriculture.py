@@ -47,8 +47,8 @@ print("="*80)
 
 # Load model
 # Load model
-model_path = os.path.join(PROJECT_ROOT, 'bot', 'models', 'lstm_agriculture.h5')
-scaler_path = os.path.join(PROJECT_ROOT, 'bot', 'models', 'scaler_agriculture.pkl')
+model_path = os.path.join(PROJECT_ROOT, 'Strategy', 'models', 'lstm_agriculture.h5')
+scaler_path = os.path.join(PROJECT_ROOT, 'Strategy', 'models', 'scaler_agriculture.pkl')
 model = load_model(model_path, custom_objects={"attention_block": None}, compile=False)
 scaler = joblib.load(scaler_path)
 
