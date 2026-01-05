@@ -50,6 +50,8 @@ This will execute the "Volatility Breakout" strategy (200% Long / -100% Short) a
   - Cumulative Return: **+52.2%** (vs +19.7% Buy & Hold)
   - Max Drawdown: **-21.0%** (vs -46.0%)
   - Sharpe Ratio: **0.35** (vs 0.19)
-
+    
+##  PS: 
+Number of files, data and models are non necessary for the final project, but still here to show the path I've used to go where the project succeeds 
 ##  Author
 Charlie Ormond
